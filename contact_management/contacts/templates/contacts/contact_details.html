@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Details{% endblock %}
+
+{% block content %}
+<h1>Contact Details</h1>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{ contact.first_name }} {{ contact.last_name }}</h5>
+        <p class="card-text"><strong>Email:</strong> {{ contact.email }}</p>
+        <p class="card-text"><strong>Phone Number:</strong> {{ contact.phone_number }}</p>
+        <p class="card-text"><strong>Address:</strong> {{ contact.address }}</p>
+    </div>
+</div>
+
+<a href="{% url 'home' %}" class="btn btn-secondary mt-3">Back to Contacts</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <title>Delete Contact</title>
+
+<h1>Delete {{ contact.first_name }} {{ contact.last_name }}?</h1>
+<form method="POST">
+{% csrf_token %}
+<button type="submit">Confirm Delete</button>
+</form>
+<a href="{% url 'home' %}">Cancel</a>
+{% endblock %}
